@@ -8,13 +8,13 @@ export default function ServicesPage() {
       <TopNavBar />
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="relative min-h-[819px] flex items-center px-8 overflow-hidden">
+        <section className="relative min-h-[819px] flex items-center px-6 lg:px-8 overflow-hidden">
           <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-grow">
             <div className="z-10">
               <span className="label-md uppercase tracking-[0.2em] text-primary font-bold mb-6 block text-sm">
                 Our Expertise
               </span>
-              <h1 className="text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter mb-8 text-on-surface">
+              <h1 className="text-4xl md:text-[3.5rem] leading-[1.1] font-extrabold tracking-tighter mb-8 text-on-surface">
                 Architecting Your <br />
                 <span className="text-primary-container">Digital Future</span>
               </h1>
@@ -46,8 +46,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Service Pillars Section */}
-        <section className="py-32 bg-surface-container-low">
-          <div className="max-w-[1440px] mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-surface-container-low">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
             <div className="mb-20">
               <h2 className="text-4xl font-black tracking-tight mb-4 text-on-surface">Core Pillars of Excellence</h2>
               <div className="w-24 h-1 bg-primary rounded-full"></div>
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                   capabilities: ['Knowledge Transfer', 'DevSecOps Culture', 'Long-term Support']
                 }
               ].map((pillar, i) => (
-                <div key={i} className="bg-surface-container-lowest p-10 rounded-lg ghost-lift flex flex-col h-full border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                <div key={i} className="bg-surface-container-lowest p-8 lg:p-10 rounded-lg ghost-lift flex flex-col h-full border border-outline-variant/10 hover:border-primary/30 transition-colors">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-8">
                     <span className="material-symbols-outlined text-3xl">{pillar.icon}</span>
                   </div>
@@ -103,10 +103,10 @@ export default function ServicesPage() {
         </section>
 
         {/* Methodology Section */}
-        <section className="py-32 bg-surface">
-          <div className="max-w-[1440px] mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-surface">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
             <div className="text-center mb-24">
-              <h2 className="text-[2.75rem] font-black tracking-tighter mb-4 text-on-surface">The Architectural Process</h2>
+              <h2 className="text-3xl md:text-[2.75rem] font-black tracking-tighter mb-4 text-on-surface">The Architectural Process</h2>
               <p className="text-lg text-on-surface/50 max-w-2xl mx-auto">
                 A systematic approach to constructing digital foundations that never falter.
               </p>
@@ -135,9 +135,9 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-32 px-8">
+        <section className="py-16 lg:py-32 px-6 lg:px-8">
           <div className="max-w-[1440px] mx-auto">
-            <div className="bg-primary p-16 md:p-24 rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl shadow-primary/20">
+            <div className="bg-primary p-8 sm:p-12 md:p-24 rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl shadow-primary/20">
               <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
               </div>
