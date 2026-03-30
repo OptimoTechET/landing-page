@@ -10,7 +10,7 @@ export default function Home() {
       <TopNavBar />
       <main>
         {/* Hero Section */}
-        <section className="pt-48 pb-32 px-8 overflow-hidden relative">
+        <section className="pt-32 lg:pt-48 pb-16 lg:pb-32 px-6 lg:px-8 overflow-hidden relative">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -57,8 +57,8 @@ export default function Home() {
         </section>
 
         {/* Mission and Vision Section */}
-        <section className="py-32 bg-white relative">
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <section className="py-16 lg:py-32 bg-white relative">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <SectionHeading 
               eyebrow="Foundation & Purpose"
               title="Defining Our Intent"
@@ -67,7 +67,7 @@ export default function Home() {
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mb-24">
-              <div className="bg-surface-container-low p-12 lg:p-16 rounded-[2rem] border border-outline-variant/20 hover:border-primary/30 transition-all duration-500 group">
+              <div className="bg-surface-container-low p-8 lg:p-16 rounded-[2rem] border border-outline-variant/20 hover:border-primary/30 transition-all duration-500 group">
                 <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white mb-10 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-3xl">rocket_launch</span>
                 </div>
@@ -76,7 +76,7 @@ export default function Home() {
                   To architect the backbone of a connected nation, ensuring no citizen is left behind in the global digital economy.
                 </p>
               </div>
-              <div className="bg-surface-container-low p-12 lg:p-16 rounded-[2rem] border border-outline-variant/20 hover:border-primary/30 transition-all duration-500 group">
+              <div className="bg-surface-container-low p-8 lg:p-16 rounded-[2rem] border border-outline-variant/20 hover:border-primary/30 transition-all duration-500 group">
                 <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white mb-10 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-3xl">visibility</span>
                 </div>
@@ -93,7 +93,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-on-surface tracking-tight uppercase">Our Core Principles</h3>
                 <p className="text-on-surface/60 mt-2">The architectural pillars that define every OptimoTech engagement.</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-stretch">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
                 {[
                   { icon: 'lightbulb', title: 'Innovation', desc: "Pushing the boundaries of what's architecturally possible." },
                   { icon: 'verified', title: 'Excellence', desc: "Setting the global standard for technical precision." },
@@ -116,8 +116,8 @@ export default function Home() {
         </section>
 
         {/* Core Service Pillars */}
-        <section className="py-32 bg-surface-container-low">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-surface-container-low">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
               <SectionHeading 
                 eyebrow="Core Expertise"
@@ -133,7 +133,7 @@ export default function Home() {
                 { icon: 'settings_suggest', num: '03', title: 'Proprietary Solutions', desc: 'Bespoke software frameworks engineered for specific industry challenges, ensuring a competitive advantage.' },
                 { icon: 'trending_up', num: '04', title: 'Capacity Building', desc: 'Empowering internal teams with tools, training, and workflows required to manage future-proof architectures.' },
               ].map((pillar, i) => (
-                <div key={i} className="group bg-white p-10 rounded-2xl border border-outline-variant/30 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+                <div key={i} className="group bg-white p-6 md:p-10 rounded-2xl border border-outline-variant/30 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-10">
                     <div className="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
                       <span className="material-symbols-outlined text-3xl">{pillar.icon}</span>
@@ -150,9 +150,9 @@ export default function Home() {
         </section>
 
         {/* Redesigned "We Turn Systems On" Section */}
-        <section className="py-32 relative bg-surface-container-lowest overflow-hidden">
+        <section className="py-16 lg:py-32 relative bg-surface-container-lowest overflow-hidden">
           <div className="absolute inset-0 grid-pattern pointer-events-none"></div>
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
               <div className="max-w-2xl">
                 <div className="flex items-center gap-3 text-primary font-bold text-sm tracking-widest uppercase mb-4">
@@ -187,7 +187,7 @@ export default function Home() {
                   cta: 'Empower Inclusion'
                 }
               ].map((col, i) => (
-                <div key={i} className="bg-surface-container-lowest p-12 hover:bg-surface-container-low transition-colors group">
+                <div key={i} className="bg-surface-container-lowest p-8 lg:p-12 hover:bg-surface-container-low transition-colors group">
                   <div className="mb-12">
                     <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
                       <span className="material-symbols-outlined text-2xl">{col.icon}</span>
@@ -213,8 +213,8 @@ export default function Home() {
         </section>
 
         {/* Challenge & Our Response Section */}
-        <section className="py-32 bg-background border-y border-outline-variant/10">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-background border-y border-outline-variant/10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <SectionHeading 
               eyebrow="Strategic Realignment"
               title="The Challenge & Our Response"
@@ -224,7 +224,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-outline-variant/20 rounded-3xl overflow-hidden border border-outline-variant/20 shadow-sm">
               {/* Problem */}
-              <div className="bg-surface-container-lowest p-12 lg:p-16">
+              <div className="bg-surface-container-lowest p-8 lg:p-16">
                 <div className="mb-10">
                   <span className="text-error font-bold text-xs tracking-widest uppercase mb-4 block">The Problem</span>
                   <h3 className="text-3xl font-extrabold text-on-surface">Fragmented Systems</h3>
@@ -248,7 +248,7 @@ export default function Home() {
               </div>
               
               {/* Solution */}
-              <div className="bg-surface-container-lowest p-12 lg:p-16 border-t lg:border-t-0 lg:border-l border-outline-variant/20">
+              <div className="bg-surface-container-lowest p-8 lg:p-16 border-t lg:border-t-0 lg:border-l border-outline-variant/20">
                 <div className="mb-10">
                   <span className="text-primary font-bold text-xs tracking-widest uppercase mb-4 block">The Solution</span>
                   <h3 className="text-3xl font-extrabold text-on-surface">Unified Ecosystems</h3>
@@ -275,8 +275,8 @@ export default function Home() {
         </section>
 
         {/* Strategic Solutions Bento Grid */}
-        <section className="py-32 bg-background">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-background">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div>
                 <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">Product Ecosystem</h2>
@@ -296,7 +296,7 @@ export default function Home() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEs9dfwJK6b0wsTfRPq5usViBZaoNvtR7QBpBSylXJsbvKUq4bOpxx5EhRz29w4g_vzxDmDmdH8zLasKyYUcSXg5KnlT6CwDpeblHskwI24gQUavz0ZdbZ-ncCB7SPrb16ZOJOhwRi0_TfYcTOh37AfcNAdAqlFfZWcY5iP3jAqtM0LX395ai5vPmeTaRLDfZxJB7rsqMaGq2E4Q7Ri1CdDLgDIck-APsEHmtSnYqlw5HP2yLJPOQ-FW0p5d8h9g7MfE9ZvgrPUugP"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="relative h-full p-12 flex flex-col justify-end text-white z-10">
+                <div className="relative h-full p-8 lg:p-12 flex flex-col justify-end text-white z-10">
                   <span className="text-xs font-bold tracking-widest uppercase mb-4 text-primary-fixed">Enterprise Mesh</span>
                   <h3 className="text-4xl font-extrabold mb-4">OptimoConnect</h3>
                   <p className="text-on-primary-container/80 max-w-md mb-8">The neural network for modern enterprises. Seamlessly bridging legacy hardware with cloud-native intelligence.</p>
@@ -306,7 +306,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="md:col-span-5 bg-surface-container-highest rounded-lg p-10 flex flex-col justify-between">
+              <div className="md:col-span-5 bg-surface-container-highest rounded-lg p-8 lg:p-10 flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-8 shadow-sm">
                     <span className="material-symbols-outlined text-primary">commute</span>
@@ -322,7 +322,7 @@ export default function Home() {
                 />
               </div>
               
-              <div className="md:col-span-4 bg-white rounded-lg p-10 border border-outline-variant/10 shadow-sm hover:shadow-xl transition-shadow flex flex-col justify-between">
+              <div className="md:col-span-4 bg-white rounded-lg p-8 lg:p-10 border border-outline-variant/10 shadow-sm hover:shadow-xl transition-shadow flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl font-bold mb-4">Maguya</h3>
                   <p className="text-on-surface/60 text-sm leading-relaxed mb-6">Decentralized asset management for high-value physical goods. Immutable tracking via OptimoChain.</p>
@@ -332,7 +332,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="md:col-span-8 bg-surface-container-low rounded-lg p-10 overflow-hidden relative">
+              <div className="md:col-span-8 bg-surface-container-low rounded-lg p-8 lg:p-10 overflow-hidden relative">
                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8 h-full">
                   <div className="max-w-md">
                     <h3 className="text-2xl font-bold mb-4">Strategic Advisory</h3>
@@ -347,14 +347,14 @@ export default function Home() {
         </section>
 
         {/* Uncompromising Service Delivery Section */}
-        <section className="py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-16 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex flex-col items-center text-center mb-20">
               <h2 className="text-4xl lg:text-5xl font-black tracking-tight text-on-surface">Uncompromising Service Delivery</h2>
               <div className="w-16 h-1 bg-primary mt-6 rounded-full"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
                 { icon: 'trending_up', title: 'Digital Strategy', desc: 'Roadmapping your digital evolution with market-specific insights.' },
                 { icon: 'code', title: 'Custom Software', desc: 'High-performance applications tailored to unique operational needs.' },
@@ -375,8 +375,8 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-32 bg-white relative overflow-hidden border-t border-outline-variant/10">
-          <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
+        <section className="py-16 lg:py-32 bg-white relative overflow-hidden border-t border-outline-variant/10">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
             <span className="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-4 block">Contact Us</span>
             <h2 className="text-5xl lg:text-7xl font-black tracking-tight text-on-surface mb-8">
               Ready to build <br/>the <span className="text-primary">unshakable?</span>

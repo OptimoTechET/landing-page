@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-surface-container-lowest pt-24 pb-12 border-t border-outline-variant/10 mt-auto">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1">
             <div className="text-2xl font-bold tracking-tighter text-on-surface mb-6">OptimoTech</div>
             <p className="text-sm text-on-surface/60 leading-relaxed mb-8">
