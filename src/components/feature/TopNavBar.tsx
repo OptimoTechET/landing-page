@@ -18,8 +18,8 @@ export function TopNavBar() {
   
   const navLinks = [
     { name: 'Solutions', href: '/solutions' },
-    { name: 'Services', href: '/services' },
-    { name: 'Vision', href: '/vision' },
+    { name: 'Services', href: '#' },
+    { name: 'Vision', href: '#' },
     { name: 'Partners', href: '/#partners' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -54,9 +54,11 @@ export function TopNavBar() {
               <span className="material-symbols-outlined">{theme === 'dark' ? 'light_mode' : 'dark_mode'}</span>
             </button>
           )}
-          <Button variant="primary" className="text-sm px-8 py-3">
-            Get Started
-          </Button>
+          <Link href="/contact">
+            <Button variant="primary" className="text-sm px-8 py-3">
+              Get Started
+            </Button>
+          </Link>
         </div>
         <button 
           className="md:hidden flex flex-col items-center justify-center p-2 text-on-surface"
@@ -97,9 +99,11 @@ export function TopNavBar() {
                 <span className="material-symbols-outlined">{theme === 'dark' ? 'light_mode' : 'dark_mode'}</span>
               </button>
             )}
-            <Button variant="primary" className="w-full justify-center text-base py-4">
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <Button variant="primary" className="w-full justify-center text-base py-4">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

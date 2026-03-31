@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { PartnersSection } from '@/components/feature/PartnersSection';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -27,12 +28,16 @@ export default function Home() {
                   We build beyond requirements. OptimoTech engineers the structural ether that powers global smart cities, decentralized logistics, and enterprise scale-up operations.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button variant="primary" className="text-lg px-10 py-4">
-                    Launch Project
-                  </Button>
-                  <Button variant="outlined" className="text-lg px-10 py-4 border-2">
-                    View Portfolio
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="primary" className="text-lg px-10 py-4">
+                      Launch Project
+                    </Button>
+                  </Link>
+                  <Link href="#">
+                    <Button variant="outlined" className="text-lg px-10 py-4 border-2">
+                      View Portfolio
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative group">
@@ -204,9 +209,9 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <button className="flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all">
+                  <Link href="/contact" className="flex items-center gap-2 text-primary font-bold text-sm hover:gap-4 transition-all">
                     {col.cta} <span className="material-symbols-outlined">arrow_forward</span>
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -283,9 +288,9 @@ export default function Home() {
                 <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">Product Ecosystem</h2>
                 <p className="text-lg text-on-surface/60 max-w-xl">Bespoke tools designed for critical infrastructure and logistics.</p>
               </div>
-              <button className="text-primary font-bold flex items-center gap-2 group">
+              <Link href="/solutions" className="text-primary font-bold flex items-center gap-2 group">
                 Explore All Solutions <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
@@ -302,7 +307,9 @@ export default function Home() {
                   <h3 className="text-4xl font-extrabold mb-4">OptimoConnect</h3>
                   <p className="text-on-primary-container/80 max-w-md mb-8">The neural network for modern enterprises. Seamlessly bridging legacy hardware with cloud-native intelligence.</p>
                   <div>
-                    <Button variant="white" className="font-bold">Learn More</Button>
+                    <Link href="/solutions">
+                      <Button variant="white" className="font-bold">Learn More</Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -328,9 +335,9 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-4">Maguya</h3>
                   <p className="text-on-surface/60 text-sm leading-relaxed mb-6">Decentralized asset management for high-value physical goods. Immutable tracking via OptimoChain.</p>
                 </div>
-                <div className="flex items-center gap-4 text-primary font-bold text-sm cursor-pointer">
+                <Link href="/solutions" className="flex items-center gap-4 text-primary font-bold text-sm cursor-pointer">
                   Case Study <span className="material-symbols-outlined text-sm">open_in_new</span>
-                </div>
+                </Link>
               </div>
               
               <div className="md:col-span-8 bg-surface-container-low rounded-lg p-8 lg:p-10 overflow-hidden relative">
@@ -338,7 +345,7 @@ export default function Home() {
                   <div className="max-w-md">
                     <h3 className="text-2xl font-bold mb-4">Strategic Advisory</h3>
                     <p className="text-on-surface/60 mb-6">We don't just sell software; we design growth cycles. Our architects consult at the board level to align tech with vision.</p>
-                    <button className="text-on-surface font-bold border-b-2 border-on-surface pb-1">Our Methodology</button>
+                    <Link href="#" className="text-on-surface font-bold border-b-2 border-on-surface pb-1">Our Methodology</Link>
                   </div>
                   <div className="hidden md:block w-48 h-48 bg-primary rounded-full blur-[100px] opacity-20"></div>
                 </div>
@@ -389,12 +396,16 @@ export default function Home() {
               Join over 400 global leaders who have trusted OptimoTech to handle their most complex digital transitions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button variant="primary" className="text-lg px-12 py-5 shadow-2xl scale-100 hover:scale-105">
-                Start Your Architecture
-              </Button>
-              <Button variant="outlined" className="text-lg px-12 py-5 border-2 border-primary text-primary bg-transparent">
-                Contact Sales
-              </Button>
+              <Link href="/contact">
+                <Button variant="primary" className="text-lg px-12 py-5 shadow-2xl scale-100 hover:scale-105">
+                  Start Your Architecture
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outlined" className="text-lg px-12 py-5 border-2 border-primary text-primary bg-transparent">
+                  Contact Sales
+                </Button>
+              </Link>
             </div>
           </div>
           

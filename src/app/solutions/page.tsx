@@ -5,6 +5,7 @@ import { Footer } from '@/components/feature/Footer';
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SolutionsPage() {
   return (
@@ -94,9 +95,11 @@ export default function SolutionsPage() {
                     <span>Efficiency Gain</span>
                     <span>+34%</span>
                   </div>
-                  <Button variant="primary" className="w-full justify-center py-4 rounded-full font-bold text-xs uppercase tracking-widest block">
-                    Explore Transit
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="primary" className="w-full justify-center py-4 rounded-full font-bold text-xs uppercase tracking-widest block">
+                      Explore Transit
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -166,9 +169,11 @@ export default function SolutionsPage() {
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Real-time processing active</span>
                   </div>
-                  <Button variant="white" className="w-full justify-center py-4 rounded-full font-bold text-xs uppercase tracking-widest">
-                    Request Demo
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="white" className="w-full justify-center py-4 rounded-full font-bold text-xs uppercase tracking-widest">
+                      Request Demo
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -276,12 +281,16 @@ export default function SolutionsPage() {
                   Ready to build the <br /><span className="text-primary">unshakable?</span>
                 </h2>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                  <Button variant="primary" className="px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl">
-                    Start Building
-                  </Button>
-                  <Button variant="outlined" className="px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest">
-                    Speak to an Architect
-                  </Button>
+                  <Link href="/contact">
+                    <Button variant="primary" className="px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl">
+                      Start Building
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="outlined" className="px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest">
+                      Speak to an Architect
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

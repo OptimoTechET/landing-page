@@ -14,17 +14,17 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Resources</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Terms of Service</Link></li>
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Cookie Settings</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Cookie Settings</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Company</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Global Offices</Link></li>
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Career</Link></li>
-              <li><Link href="/" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Press Kit</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Global Offices</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Career</Link></li>
+              <li><Link href="#" className="text-sm text-on-surface/60 hover:text-primary transition-colors">Press Kit</Link></li>
             </ul>
           </div>
           <div>
