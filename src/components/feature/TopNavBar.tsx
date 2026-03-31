@@ -20,7 +20,7 @@ export function TopNavBar() {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '/services' },
     { name: 'Vision', href: '/vision' },
-    { name: 'Partners', href: '/partners' },
+    { name: 'Partners', href: '/#partners' },
   ];
 
   return (

@@ -2,6 +2,7 @@ import { TopNavBar } from '@/components/feature/TopNavBar';
 import { Footer } from '@/components/feature/Footer';
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { PartnersSection } from '@/components/feature/PartnersSection';
 import Image from 'next/image';
 
 export default function Home() {
@@ -345,6 +346,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <PartnersSection />
 
         {/* Uncompromising Service Delivery Section */}
         <section className="py-16 lg:py-32 bg-white">
