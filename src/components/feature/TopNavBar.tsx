@@ -21,6 +21,7 @@ export function TopNavBar() {
     { name: 'Services', href: '/services' },
     { name: 'Vision', href: '/vision' },
     { name: 'Partners', href: '/#partners' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (

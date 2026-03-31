@@ -31,7 +31,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background text-on-surface min-h-screen font-body selection:bg-primary-container selection:text-white flex flex-col">
+      <body suppressHydrationWarning className="bg-background text-on-surface min-h-screen font-body selection:bg-primary-container selection:text-white flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
