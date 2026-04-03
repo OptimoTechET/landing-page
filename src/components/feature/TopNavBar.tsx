@@ -11,22 +11,42 @@ export function TopNavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+
+      // Calculate scroll progress
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      setScrollProgress(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
   const navLinks = [
     { name: 'Solutions', href: '/solutions' },
-    { name: 'Services', href: '#' },
-    { name: 'Vision', href: '#' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Vision', href: '/#vision' },
     { name: 'Partners', href: '/#partners' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#f7f9fb]/80 dark:bg-[#191c1e]/80 glass-nav shadow-[0_20px_40px_rgba(25,28,30,0.06)]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      scrolled 
+        ? 'bg-white/90 dark:bg-[#191c1e]/90 shadow-lg border-b border-outline-variant/10 py-2' 
+        : 'bg-[#f7f9fb]/50 dark:bg-[#191c1e]/50 py-5'
+    } glass-nav`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-on-surface">
           OptimoTech
         </Link>
@@ -106,6 +126,14 @@ export function TopNavBar() {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-0.5 bg-primary/10 w-full overflow-hidden">
+        <div 
+          className="h-full bg-primary transition-all duration-150 ease-out" 
+          style={{ width: `${scrollProgress}%` }}
+        />
       </div>
     </nav>
   );

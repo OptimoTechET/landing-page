@@ -60,6 +60,7 @@
 }
 
 :root {
+  scroll-behavior: smooth;
   --on-tertiary: #ffffff;
   --tertiary: #952200;
   --surface-container-highest: #e0e3e5;
@@ -213,4 +214,23 @@ body {
 .ghost-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(25, 28, 30, 0.06);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 10px;
+  border: 2px solid var(--surface-container-low);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
 }
