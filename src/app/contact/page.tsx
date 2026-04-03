@@ -1,16 +1,58 @@
 "use client";
 
+import { useState } from 'react';
 import { TopNavBar } from '@/components/feature/TopNavBar';
 import { Footer } from '@/components/feature/Footer';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    if (!formData.name.trim()) newErrors.name = 'Full name is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email format';
+    }
+    if (!formData.company.trim()) newErrors.company = 'Company name is required';
+    if (!formData.message.trim()) newErrors.message = 'Message architecture is required';
+    return newErrors;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
   return (
     <>
       <TopNavBar />
       <main className="pt-20 bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
-        {/* Hero Section */}
+        {/* ... Hero Section unchanged ... */}
         <section className="px-6 lg:px-8 py-24 md:py-32 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -71,33 +113,84 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="lg:col-span-8">
-                <div className="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.04)]">
-                  <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-2">
-                        <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Full Name</label>
-                        <input className="w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30" placeholder="John Doe" type="text" />
+                {isSubmitted ? (
+                  <div className="bg-surface-container-lowest p-12 md:p-20 rounded-xl shadow-2xl text-center flex flex-col items-center justify-center animate-in fade-in zoom-in duration-500">
+                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-8">
+                      <span className="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                    <h3 className="text-3xl font-extrabold mb-4">Transmission Successful</h3>
+                    <p className="text-on-surface/60 max-w-sm mb-10">
+                      Your architectural brief has been integrated into our queue. A system architect will reach out shortly.
+                    </p>
+                    <Button variant="outlined" onClick={() => setIsSubmitted(false)}>Send another brief</Button>
+                  </div>
+                ) : (
+                  <div className="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.04)]">
+                    <form className="space-y-8" onSubmit={handleSubmit}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-2">
+                          <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Full Name</label>
+                          <input 
+                            className={`w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30 ${errors.name ? 'ring-2 ring-error/50' : ''}`}
+                            placeholder="John Doe" 
+                            type="text" 
+                            value={formData.name}
+                            onChange={(e) => setFormData({...formData, name: e.target.value})}
+                          />
+                          {errors.name && <p className="text-[10px] text-error font-bold ml-4 uppercase tracking-tighter">{errors.name}</p>}
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Corporate Email</label>
+                          <input 
+                            className={`w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30 ${errors.email ? 'ring-2 ring-error/50' : ''}`}
+                            placeholder="j.doe@company.com" 
+                            type="email" 
+                            value={formData.email}
+                            onChange={(e) => setFormData({...formData, email: e.target.value})}
+                          />
+                          {errors.email && <p className="text-[10px] text-error font-bold ml-4 uppercase tracking-tighter">{errors.email}</p>}
+                        </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Corporate Email</label>
-                        <input className="w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30" placeholder="j.doe@company.com" type="email" />
+                        <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Company Name</label>
+                        <input 
+                          className={`w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30 ${errors.company ? 'ring-2 ring-error/50' : ''}`}
+                          placeholder="OptimoTech Systems" 
+                          type="text" 
+                          value={formData.company}
+                          onChange={(e) => setFormData({...formData, company: e.target.value})}
+                        />
+                        {errors.company && <p className="text-[10px] text-error font-bold ml-4 uppercase tracking-tighter">{errors.company}</p>}
                       </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Company Name</label>
-                      <input className="w-full bg-surface-container-high border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30" placeholder="OptimoTech Systems" type="text" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Message Architecture</label>
-                      <textarea className="w-full bg-surface-container-high border-none rounded-3xl px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30" placeholder="Describe your project requirements..." rows={5}></textarea>
-                    </div>
-                    <div className="pt-4">
-                      <Button variant="primary" className="w-full md:w-auto px-12 py-4 rounded-full font-bold tracking-tight shadow-xl shadow-primary/20">
-                        Submit Architecture
-                      </Button>
-                    </div>
-                  </form>
-                </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-on-surface/40 ml-4">Message Architecture</label>
+                        <textarea 
+                          className={`w-full bg-surface-container-high border-none rounded-3xl px-6 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface/30 ${errors.message ? 'ring-2 ring-error/50' : ''}`}
+                          placeholder="Describe your project requirements..." 
+                          rows={5}
+                          value={formData.message}
+                          onChange={(e) => setFormData({...formData, message: e.target.value})}
+                        ></textarea>
+                        {errors.message && <p className="text-[10px] text-error font-bold ml-4 uppercase tracking-tighter">{errors.message}</p>}
+                      </div>
+                      <div className="pt-4">
+                        <Button 
+                          variant="primary" 
+                          type="submit"
+                          disabled={isSubmitting}
+                          className={`w-full md:w-auto px-12 py-4 rounded-full font-bold tracking-tight shadow-xl shadow-primary/20 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                        >
+                          {isSubmitting ? (
+                            <>
+                              <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                              Transmitting...
+                            </>
+                          ) : 'Submit Architecture'}
+                        </Button>
+                      </div>
+                    </form>
+                  </div>
+                )}
               </div>
             </div>
           </div>

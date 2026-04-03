@@ -13,7 +13,11 @@ export function ProductEcosystem() {
             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">Product Ecosystem</h2>
             <p className="text-lg text-on-surface/60 max-w-xl">Bespoke tools designed for critical infrastructure and logistics.</p>
           </div>
-          <Link href="/solutions" className="text-primary font-bold flex items-center gap-2 group">
+          <Link 
+            href="/solutions" 
+            className="text-primary font-bold flex items-center gap-2 group"
+            aria-label="Explore all OptimoTech solutions and products"
+          >
             Explore All Solutions <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
@@ -34,7 +38,7 @@ export function ProductEcosystem() {
               <p className="text-on-primary-container/80 max-w-md mb-8">The neural network for modern enterprises. Seamlessly bridging legacy hardware with cloud-native intelligence.</p>
               <div>
                 <Link href="/solutions">
-                  <Button variant="white" className="font-bold">Learn More</Button>
+                  <Button variant="white" className="font-bold" aria-label="Learn more about OptimoConnect enterprise mesh">Learn More</Button>
                 </Link>
               </div>
             </div>
@@ -64,7 +68,11 @@ export function ProductEcosystem() {
               <h3 className="text-xl font-bold mb-4">Maguya</h3>
               <p className="text-on-surface/60 text-sm leading-relaxed mb-6">Decentralized asset management for high-value physical goods. Immutable tracking via OptimoChain.</p>
             </div>
-            <Link href="/solutions" className="flex items-center gap-4 text-primary font-bold text-sm cursor-pointer">
+            <Link 
+              href="/solutions" 
+              className="flex items-center gap-4 text-primary font-bold text-sm cursor-pointer"
+              aria-label="Read the Maguya decentralized asset management case study"
+            >
               Case Study <span className="material-symbols-outlined text-sm">open_in_new</span>
             </Link>
           </div>

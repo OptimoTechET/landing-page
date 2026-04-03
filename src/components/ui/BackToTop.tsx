@@ -32,7 +32,7 @@ export function BackToTop() {
       className={`fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-primary text-white shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
       }`}
-      aria-label="Back to top"
+      aria-label="Scroll back to top"
     >
       <span className="material-symbols-outlined text-2xl group-hover:-translate-y-1 transition-transform">arrow_upward</span>
     </button>

@@ -74,10 +74,14 @@ export default function SolutionsPage() {
                       <div className="w-full h-full bg-primary rounded-full"></div>
                     </div>
                   </div>
-                  <a className="flex items-center gap-2 font-bold text-primary group/link" href="#">
+                  <Link 
+                    href="/contact" 
+                    className="flex items-center gap-2 font-bold text-primary group/link"
+                    aria-label="Learn more about OptimoConnect enterprise neural networks"
+                  >
                     Learn More 
                     <span className="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -150,7 +154,13 @@ export default function SolutionsPage() {
                       +2M
                     </div>
                   </div>
-                  <a className="text-sm font-bold text-primary hover:underline" href="#">View Case Study</a>
+                  <Link 
+                    className="text-sm font-bold text-primary hover:underline" 
+                    href="/contact"
+                    aria-label="View Warka digital learning case study"
+                  >
+                    View Case Study
+                  </Link>
                 </div>
               </div>
 
@@ -221,10 +231,14 @@ export default function SolutionsPage() {
                   </p>
                 </div>
                 <div className="relative z-10">
-                  <a className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link" href="#">
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link"
+                    aria-label="Read Full Case Study"
+                  >
                     Read Full Case Study
                     <span className="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* Case Study 2 --> */}
@@ -238,10 +252,14 @@ export default function SolutionsPage() {
                   </p>
                 </div>
                 <div className="relative z-10">
-                  <a className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link" href="#">
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link"
+                    aria-label="Read Full Case Study"
+                  >
                     Read Full Case Study
                     <span className="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* Case Study 3 --> */}
@@ -255,10 +273,14 @@ export default function SolutionsPage() {
                   </p>
                 </div>
                 <div className="relative z-10">
-                  <a className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link" href="#">
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center gap-2 font-bold text-sm text-primary group/link"
+                    aria-label="Read Full Case Study"
+                  >
                     Read Full Case Study
                     <span className="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

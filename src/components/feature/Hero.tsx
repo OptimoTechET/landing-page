@@ -23,12 +23,20 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button variant="primary" className="text-lg px-10 py-4">
+                <Button 
+                  variant="primary" 
+                  className="text-lg px-10 py-4"
+                  aria-label="Launch project and contact our team"
+                >
                   Launch Project
                 </Button>
               </Link>
               <Link href="#">
-                <Button variant="outlined" className="text-lg px-10 py-4 border-2">
+                <Button 
+                  variant="outlined" 
+                  className="text-lg px-10 py-4 border-2"
+                  aria-label="View our architectural project portfolio"
+                >
                   View Portfolio
                 </Button>
               </Link>

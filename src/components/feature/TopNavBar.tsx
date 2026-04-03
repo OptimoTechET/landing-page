@@ -83,7 +83,7 @@ export function TopNavBar() {
         <button 
           className="md:hidden flex flex-col items-center justify-center p-2 text-on-surface"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           <span className="material-symbols-outlined text-2xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
         </button>

@@ -67,8 +67,8 @@ export function PartnersSection() {
                 alt="Abstract high-tech visualization of digital neural networks" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
                 src="/images/partners-visualization.webp"
-                width={800}
-                height={600}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-overlay"></div>
             </div>
