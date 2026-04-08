@@ -10,16 +10,16 @@ set -e
 
 echo "Starting deployment process..."
 
-# Pull the latest image
 echo "Pulling latest image..."
 docker pull ghcr.io/optimotechet/landing-page/landing:latest
 
-# Recreate and start the container
-echo "Recreating and starting the container..."
-docker compose up -d landing
+echo "Stopping containers..."
+docker compose down
 
-# Prune unused images to reclaim disk space
+echo "Starting containers..."
+docker compose up -d
+
 echo "Pruning dangling images..."
-docker image prune -a -f --filter "until=24h"
+docker image prune -f
 
-echo "Deployment completed successfully!"
+echo "Deployment completed successfully! ✅"
