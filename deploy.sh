@@ -12,7 +12,7 @@ echo "Starting deployment process..."
 
 # Pull the latest image
 echo "Pulling latest image..."
-docker compose pull landing
+docker pull ghcr.io/optimotechet/landing-page/landing:latest
 
 # Recreate and start the container
 echo "Recreating and starting the container..."

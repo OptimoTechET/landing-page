@@ -1,6 +1,6 @@
 services:
   landing:
-    image: ${DOCKER_IMAGE:-ghcr.io/optimotechet/landing-page/landing:latest}
+    image: ghcr.io/optimotechet/landing-page/landing:latest
     container_name: landing
     restart: unless-stopped
     environment:
