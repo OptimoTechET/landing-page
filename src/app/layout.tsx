@@ -86,8 +86,8 @@ export default function RootLayout({
       <body suppressHydrationWarning className="bg-background text-on-surface min-h-screen font-body selection:bg-primary-container selection:text-white flex flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <JsonLd />
