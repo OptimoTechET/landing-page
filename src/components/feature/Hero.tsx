@@ -19,7 +19,7 @@ export function Hero() {
               Infrastructure.
             </h1>
             <p className="text-lg text-on-surface/70 max-w-xl leading-relaxed mb-10">
-              We build beyond requirements. OptimoTech engineers the structural ether that powers global smart cities, decentralized logistics, and enterprise scale-up operations.
+              We move decisively from strategy to execution. OptimoTech integrates intelligent systems, data governance, and upskilling to deliver measurable national impact.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

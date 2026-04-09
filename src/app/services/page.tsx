@@ -62,7 +62,7 @@ export default function ServicesPage() {
                 },
                 { 
                   icon: 'settings_input_component', title: 'Smart Infrastructure', 
-                  desc: 'IoT-driven ecosystems that transform physical assets into intelligent, responsive network nodes.',
+                  desc: 'We deliver AI-ready, resilient IT architectures and automated workflows that enhance governance and operational efficiency while ensuring sustainable, managed digital ecosystems.',
                   capabilities: ['Edge Computing', 'Sensor Integration', 'Autonomous Nodes']
                 },
                 { 

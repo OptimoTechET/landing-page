@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "OptimoTech - Architecting Digital Infrastructure & Data Highways",
     template: "%s | OptimoTech"
   },
-  description: "OptimoTech engineers the structural ether for smart cities, decentralized logistics, and global enterprise operations. Architecting the future of systems in Ethiopia and beyond.",
+  description: "We move decisively from strategy to execution. OptimoTech integrates intelligent systems, data governance, and upskilling to deliver measurable national impact.",
   keywords: ["Digital Infrastructure", "Software Architecture Ethiopia", "Smart City Systems", "Decentralized Logistics", "Enterprise Scalability", "System Activation", "Ethiopian Tech Ecosystem", "Tech Solutions", "Bespoke Enterprise Software"],
   authors: [{ name: "OptimoTech Team" }],
   creator: "OptimoTech",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OptimoTech - Architecting Digital Infrastructure',
-    description: 'We turn systems on. The backbone of a connected nation.',
+    description: 'We move decisively from strategy to execution. OptimoTech integrates intelligent systems, data governance, and upskilling to deliver measurable national impact.',
     images: ['/images/og-image.webp'],
     creator: '@OptimoTech',
   },

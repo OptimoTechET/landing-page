@@ -72,7 +72,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest opacity-60">Email Inquiry</p>
-                    <p className="text-lg font-medium text-on-surface">hello@optimotech.io</p>
+                    <p className="text-lg font-medium text-on-surface">operations@optimotech.et</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest opacity-60">Sales Department</p>
-                    <p className="text-lg font-medium text-on-surface">+1 (888) OPTIMO-TECH</p>
+                    <p className="text-lg font-medium text-on-surface">+251 95 427 1746</p>
                   </div>
                 </div>
               </div>
@@ -201,54 +201,27 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <h2 className="text-4xl font-extrabold tracking-tight text-on-surface mb-16 text-center">Global Nodes</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* NY HQ */}
-              <div className="group">
-                <div className="aspect-video rounded-xl overflow-hidden mb-8 bg-surface-container relative">
-                  <Image 
-                    alt="New York City" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
-                    src="/images/office-ny.webp"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
-                  <div className="absolute bottom-8 left-8">
-                    <h3 className="text-2xl font-bold text-white">Global Headquarters</h3>
-                    <p className="text-white/70">New York, USA</p>
-                  </div>
-                </div>
-                <div className="px-4">
-                  <p className="text-on-surface/60 leading-relaxed mb-4">
-                    5th Avenue Tech Plaza, Suite 400<br />
-                    New York, NY 10001
-                  </p>
-                  <a className="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
-                    View Map <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-              {/* Addis Ababa Hub --> */}
-              <div className="group">
+              <div className="group col-span-1 md:col-span-2 max-w-2xl mx-auto w-full">
                 <div className="aspect-video rounded-xl overflow-hidden mb-8 bg-surface-container relative">
                   <Image 
                     alt="Addis Ababa" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
                     src="/images/office-addis.webp"
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 80vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent"></div>
                   <div className="absolute bottom-8 left-8">
-                    <h3 className="text-2xl font-bold text-white">Regional Hub</h3>
+                    <h3 className="text-2xl font-bold text-white">Global Headquarters</h3>
                     <p className="text-white/70">Addis Ababa, Ethiopia</p>
                   </div>
                 </div>
-                <div className="px-4">
+                <div className="px-4 text-center">
                   <p className="text-on-surface/60 leading-relaxed mb-4">
-                    Bole Tele Plaza, East Wing<br />
+                    Kazanchis Osac Building 1st floor<br />
                     Addis Ababa, Ethiopia
                   </p>
-                  <a className="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                  <a className="text-primary font-bold text-sm uppercase tracking-widest inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
                     View Map <span className="material-symbols-outlined text-sm">arrow_forward</span>
                   </a>
                 </div>
@@ -264,19 +237,19 @@ export default function ContactPage() {
               <span className="material-symbols-outlined text-primary text-3xl mb-6">support_agent</span>
               <h4 className="text-xl font-bold mb-2 text-on-surface">Technical Support</h4>
               <p className="text-on-surface/60 text-sm mb-6">24/7 dedicated engineering support for active systems.</p>
-              <p className="text-primary font-medium">support@optimotech.io</p>
+              <p className="text-primary font-medium">operations@optimotech.et</p>
             </div>
             <div className="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-high transition-all">
               <span className="material-symbols-outlined text-primary text-3xl mb-6">payments</span>
               <h4 className="text-xl font-bold mb-2 text-on-surface">Billing & Finance</h4>
               <p className="text-on-surface/60 text-sm mb-6">Inquiries regarding procurement and invoicing.</p>
-              <p className="text-primary font-medium">billing@optimotech.io</p>
+              <p className="text-primary font-medium">operations@optimotech.et</p>
             </div>
             <div className="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-high transition-all">
               <span className="material-symbols-outlined text-primary text-3xl mb-6">groups</span>
               <h4 className="text-xl font-bold mb-2 text-on-surface">Media Relations</h4>
               <p className="text-on-surface/60 text-sm mb-6">Press kits and architectural feature requests.</p>
-              <p className="text-primary font-medium">press@optimotech.io</p>
+              <p className="text-primary font-medium">operations@optimotech.et</p>
             </div>
           </div>
         </section>

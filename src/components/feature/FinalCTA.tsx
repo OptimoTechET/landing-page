@@ -12,7 +12,7 @@ export function FinalCTA() {
           Ready to build <br/>the <span className="text-primary">unshakable?</span>
         </h2>
         <p className="text-xl text-on-surface/60 mb-12 max-w-2xl mx-auto">
-          Join over 400 global leaders who have trusted OptimoTech to handle their most complex digital transitions.
+          Partner with OptimoTech to build lasting national capability and drive institutional modernization through intelligent digital systems.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <Link href="/contact">

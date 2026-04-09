@@ -14,7 +14,7 @@ export function JsonLd() {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Sales and Inquiries",
-      "email": "hello@optimotech.et",
+      "email": "operations@optimotech.et",
       "url": "https://optimotech.et/contact"
     }
   };

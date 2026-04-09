@@ -30,8 +30,8 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Contact</h4>
             <ul className="space-y-4">
-              <li className="text-sm text-on-surface/60">Level 42, The Spire, New York</li>
-              <li><a href="mailto:hello@optimotech.io" className="text-sm text-primary font-bold hover:underline">hello@optimotech.io</a></li>
+              <li className="text-sm text-on-surface/60">Kazanchis Osac Building 1st floor, Addis Ababa, Ethiopia</li>
+              <li><a href="mailto:operations@optimotech.et" className="text-sm text-primary font-bold hover:underline">operations@optimotech.et</a></li>
             </ul>
           </div>
         </div>

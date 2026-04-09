@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export function PartnersSection() {
   const partners = [
-    { name: 'TELECOM' },
-    { name: 'GOV.ET' },
-    { name: 'FINANCEHUB' },
-    { name: 'ENERGY CORP' },
-    { name: 'LOGISTICS PRO' },
+    { name: 'KOENIG', href: 'https://www.koenig-solutions.com/' },
+    { name: 'POTESTAS TECHNOLOGIES', href: 'https://www.potestastechnologies.net/' },
+    { name: 'ANALYTICS INTELLIGENCE AFRICA', href: 'https://www.aiacademy.africa' },
+    { name: 'DEVINTELLE SOLUTIONS', href: 'https://www.devintellecs.com/' },
+    { name: 'TILIL TECHNOLOGIES', href: 'https://waba.tililtech.com/' },
   ];
 
   return (
@@ -79,16 +79,23 @@ export function PartnersSection() {
         <div className="pt-24 border-t border-outline-variant/10">
           <div className="text-center mb-16">
             <span className="text-on-surface/40 font-bold text-xs tracking-widest uppercase block mb-8">Strategic Partners & Clients</span>
-            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-40 hover:opacity-100 transition-all duration-500">
               {partners.map((partner) => (
-                <span key={partner.name} className="text-xl md:text-2xl font-black tracking-tighter text-on-surface select-none">
+                <a 
+                  key={partner.name} 
+                  href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg md:text-xl font-black tracking-tighter text-on-surface hover:text-primary transition-colors cursor-pointer"
+                >
                   {partner.name}
-                </span>
+                </a>
               ))}
             </div>
           </div>
         </div>
       </div>
     </section>
+
   );
 }

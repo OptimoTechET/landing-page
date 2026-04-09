@@ -20,7 +20,7 @@ export function MissionVision() {
             </div>
             <h3 className="text-3xl font-extrabold mb-6 text-on-surface">Our Mission</h3>
             <p className="text-xl text-on-surface/70 leading-relaxed font-medium">
-              To architect the backbone of a connected nation, ensuring no citizen is left behind in the global digital economy.
+              To be the most trusted technology partner, transforming investments into lasting national capability through digital systems and local capacity building.
             </p>
           </div>
           <div className="bg-surface-container-low p-8 lg:p-16 rounded-[2rem] border border-outline-variant/20 hover:border-primary/30 transition-all duration-500 group">
@@ -29,7 +29,7 @@ export function MissionVision() {
             </div>
             <h3 className="text-3xl font-extrabold mb-6 text-on-surface">Our Vision</h3>
             <p className="text-xl text-on-surface/70 leading-relaxed font-medium">
-              A fully interoperable Ethiopia where technology fuels prosperity, governance, and social equity through intelligent systems.
+              To enable a digitally empowered Ethiopia where intelligent systems, trusted data, and skilled institutions drive inclusive growth and efficient governance.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export function MissionVision() {
               { icon: 'verified', title: 'Excellence', desc: "Setting the global standard for technical precision." },
               { icon: 'balance', title: 'Integrity', desc: "Unwavering ethical commitment in every line of code." },
               { icon: 'handshake', title: 'Collaboration', desc: "Building stronger together through shared vision." },
-              { icon: 'eco', title: 'Sustainability', desc: "Designing for the long-term impact on our planet." },
+              { icon: 'groups', title: 'Inclusivity', desc: "Champion technology access and empower communities." },
             ].map((val, i) => (
               <div key={i} className="group bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/10 hover:border-primary/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 flex flex-col items-center text-center ghost-lift">
                 <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">

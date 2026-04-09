@@ -17,7 +17,7 @@ export function ServicePillars() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: 'architecture', num: '01', title: 'Software Architecture', desc: 'High-availability systems designed with modular resilience and zero-bottleneck data pipelines for global scale.' },
-            { icon: 'hub', num: '02', title: 'Smart Infrastructure', desc: 'IoT-driven ecosystems that transform physical assets into intelligent, responsive, and secure network nodes.' },
+            { icon: 'hub', num: '02', title: 'Smart Infrastructure', desc: 'We deliver AI-ready, resilient IT architectures and automated workflows that enhance governance and operational efficiency while ensuring sustainable, managed digital ecosystems.' },
             { icon: 'settings_suggest', num: '03', title: 'Proprietary Solutions', desc: 'Bespoke software frameworks engineered for specific industry challenges, ensuring a competitive advantage.' },
             { icon: 'trending_up', num: '04', title: 'Capacity Building', desc: 'Empowering internal teams with tools, training, and workflows required to manage future-proof architectures.' },
           ].map((pillar, i) => (
